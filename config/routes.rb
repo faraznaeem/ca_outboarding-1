@@ -2,9 +2,11 @@
 
 Rails.application.routes.draw do
   namespace :admin do
-    resources :users, only: %i[index new create]
-    root controller: :users, action: :index
-  end
+		resources :users, only: %i[index new create]
+		resources :letters_of_recommendations, only: %i[index new create]
+		root controller: :users, action: :index
+	end
+
   devise_for :users, controllers: {
     omniauth_callbacks: :omniauth_callbacks,
     registrations: :registrations,
@@ -12,5 +14,5 @@ Rails.application.routes.draw do
   }
   root controller: :members, action: :index
   resources :members, only: %i[show edit update]
-  resources :subscriptions, only: %i[new create]
+	resources :subscriptions, only: %i[new create]
 end
