@@ -3,3 +3,11 @@
 = link_to 'Add Member', new_admin_user_path, remote: true
 
 = link_to 'Add Letter of Recommendation', admin_letters_path
+
+%h2 Letter of Recommendation 
+= form_with url: admin_letters_path, scope: :article, local: true  do |f|
+
+  %div
+    = f.label :header
+    = f.text_field :header
+  %div

@@ -12,8 +12,8 @@ Feature: Coach can create a Letter of Reccomendation
     Scenario: Coach visits admin interface and creates a user with valid info
         Given he visits the admin page
         And click on "Add Letter of Recommendation"
-				Then he should see "Write A letter of recommendation"
-				And click on "Student One"
+        Then he should see "Write A letter of recommendation"
+        And click on "Student One"
         And fills in "Title" with "Student One"
         And fills in "Content" with "Lorem Ipsum"
         And he clicks on "Create LOR"
