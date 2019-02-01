@@ -13,8 +13,8 @@ Feature: Coach can create a Letter of Reccomendation
         Given he visits the admin page
         And click on "Add Letter of Recommendation"
         Then he should see "Write A letter of recommendation"
-        And click on "Student One"
-        And fills in "Title" with "Student One"
+        And click on "Write A letter of recommendation"
+        And he should see "Title" with "Letter of recommendation"
         And fills in "Content" with "Lorem Ipsum"
         And he clicks on "Create LOR"
         Then he should be on the admin page

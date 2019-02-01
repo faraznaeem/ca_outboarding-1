@@ -1,12 +1,4 @@
 %h1 Write A letter of recommendation
 
 - @members.each do |member|
-	= link_to member.display_name
-
-	= form_with url: admin_letters_path, scope: :letter, local: true  do |form|
-		%div
-			= form.label :Title
-			= form.text_field :Title
-			%div
-				= form.label :Content
-				= form.text_field :Content
+	= link_to member.display_name 
